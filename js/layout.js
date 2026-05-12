@@ -38,7 +38,7 @@ function renderNav(activePage, basePath = "") {
 
   navEl.innerHTML = `
     <div class="max-w-[1280px] mx-auto px-6 h-[80px] flex items-center justify-between">
-      <a href="${logoHref}" class="text-xl font-bold tracking-tighter text-blue-900 shrink-0"><img style="width:20rem" src="/images/AMAANAT MEDICAL FULL  Primary LOGO.png"  > </a>
+      <a href="${logoHref}" class="text-xl font-bold tracking-tighter text-blue-900 shrink-0"><img style="width:6rem" src="/images/Amaanat Medical Secondary Logo.png"  > </a>
 
       <nav class="hidden md:flex items-center space-x-8">${desktopLinks}</nav>
 
