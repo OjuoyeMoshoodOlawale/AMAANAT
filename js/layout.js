@@ -112,7 +112,7 @@ function renderFooter(basePath = "") {
   document.getElementById("site-footer").innerHTML = `
     <div class="max-w-[1280px] mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
       <div>
-        <a href="${basePath}index.html" class="text-2xl font-black text-white mb-6 block">AMAANAT MEDICAL</a>
+        <a href="${basePath}index.html" class="text-2xl font-black text-white mb-6 block"><img style="width:8rem" src="/images/Amaanat Medical Secondary Logo.png"></a>
         <p class="text-slate-300 font-['Inter'] text-sm leading-relaxed mb-6">
           Precision Engineering for Modern Healthcare Diagnostics. Empowering hospitals with technology since 2001.
         </p>
