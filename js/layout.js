@@ -2,17 +2,17 @@
 // Includes: mobile hamburger menu, active link highlighting, shared footer
 
 const NAV_LINKS = [
-  { label: "Home",      href: "index.html",          key: "home" },
-  { label: "About",     href: "pages/about.html",     key: "about" },
-  { label: "Services",  href: "pages/services.html",  key: "services" },
+  { label: "Home", href: "index.html", key: "home" },
+  { label: "About", href: "pages/about.html", key: "about" },
+  { label: "Services", href: "pages/services.html", key: "services" },
   { label: "Equipment", href: "pages/equipment.html", key: "equipment" },
-  { label: "Projects",  href: "pages/projects.html",  key: "projects" },
-  { label: "Partners",  href: "pages/partners.html",  key: "partners" },
-  { label: "Contact",   href: "pages/contact.html",   key: "contact" },
+  { label: "Projects", href: "pages/projects.html", key: "projects" },
+  { label: "Partners", href: "pages/partners.html", key: "partners" },
+  { label: "Contact", href: "pages/contact.html", key: "contact" },
 ];
 
 function renderNav(activePage, basePath = "") {
-  const desktopLinks = NAV_LINKS.map(link => {
+  const desktopLinks = NAV_LINKS.map((link) => {
     const href = basePath + link.href;
     const isActive = link.key === activePage;
     const cls = isActive
@@ -21,7 +21,7 @@ function renderNav(activePage, basePath = "") {
     return `<a href="${href}" class="font-['Inter'] text-sm font-medium tracking-tight ${cls}">${link.label}</a>`;
   }).join("\n");
 
-  const mobileLinks = NAV_LINKS.map(link => {
+  const mobileLinks = NAV_LINKS.map((link) => {
     const href = basePath + link.href;
     const isActive = link.key === activePage;
     const cls = isActive
@@ -30,7 +30,7 @@ function renderNav(activePage, basePath = "") {
     return `<a href="${href}" class="block px-4 py-3 rounded-lg font-['Inter'] text-sm font-medium ${cls} transition-colors">${link.label}</a>`;
   }).join("\n");
 
-  const logoHref    = basePath + "index.html";
+  const logoHref = basePath + "index.html";
   const contactHref = basePath + "pages/contact.html";
 
   const navEl = document.getElementById("site-nav");
@@ -38,7 +38,7 @@ function renderNav(activePage, basePath = "") {
 
   navEl.innerHTML = `
     <div class="max-w-[1280px] mx-auto px-6 h-[80px] flex items-center justify-between">
-      <a href="${logoHref}" class="text-xl font-bold tracking-tighter text-blue-900 shrink-0">AMAANAT MEDICAL</a>
+      <a href="${logoHref}" class="text-xl font-bold tracking-tighter text-blue-900 shrink-0"><img style="width:20rem" src="/images/AMAANAT MEDICAL FULL  Primary LOGO.png"  > </a>
 
       <nav class="hidden md:flex items-center space-x-8">${desktopLinks}</nav>
 
@@ -73,8 +73,8 @@ function renderNav(activePage, basePath = "") {
     </div>
   `;
 
-  const btn   = document.getElementById("mobile-menu-btn");
-  const menu  = document.getElementById("mobile-menu");
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
   const lines = btn.querySelectorAll(".ham-line");
 
   function openMenu() {
@@ -82,7 +82,7 @@ function renderNav(activePage, basePath = "") {
     btn.setAttribute("aria-expanded", "true");
     btn.setAttribute("aria-label", "Close menu");
     lines[0].style.transform = "translateY(7px) rotate(45deg)";
-    lines[1].style.opacity   = "0";
+    lines[1].style.opacity = "0";
     lines[2].style.transform = "translateY(-7px) rotate(-45deg)";
   }
 
@@ -91,7 +91,7 @@ function renderNav(activePage, basePath = "") {
     btn.setAttribute("aria-expanded", "false");
     btn.setAttribute("aria-label", "Open menu");
     lines[0].style.transform = "";
-    lines[1].style.opacity   = "1";
+    lines[1].style.opacity = "1";
     lines[2].style.transform = "";
   }
 
@@ -100,7 +100,9 @@ function renderNav(activePage, basePath = "") {
     menu.style.display === "none" ? openMenu() : closeMenu();
   });
 
-  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+  menu
+    .querySelectorAll("a")
+    .forEach((a) => a.addEventListener("click", closeMenu));
   document.addEventListener("click", (e) => {
     if (!btn.contains(e.target) && !menu.contains(e.target)) closeMenu();
   });
