@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMAANAT MEDICAL — Contact Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      .field-error {
+        border-color: #ba1a1a !important;
+      }
+      .error-msg {
+        color: #ba1a1a;
+        font-size: 12px;
+        margin-top: 4px;
+        display: none;
+      }
+      .error-msg.show {
+        display: block;
+      }
+      #form-success {
+        display: none;
+      }
+      .input-base {
+        width: 100%;
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.5rem;
+        padding: 12px 16px;
+        font-size: 14px;
+        outline: none;
+        transition: all 0.2s;
+        font-family: "Open Sans", sans-serif;
+      }
+      .input-base:focus {
+        border-color: #006783;
+        box-shadow: 0 0 0 3px rgba(0, 103, 131, 0.12);
+      }
+      label {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #42474e;
+        margin-bottom: 6px;
+        display: block;
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-background font-body-md text-on-background">
+    <header
+      id="site-nav"
+      class="fixed top-0 w-full z-50 h-[80px] bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-card"
+    ></header>
+
+  <main class="pt-[80px]">
+
+    <!-- Hero -->
+    <section class="relative h-[380px] flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img class="object-cover w-full h-full grayscale opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz3qQQnMRD_eHCSxzWkVCk6xUyJoQf-ciC8OmsuW5b_kjwLpOc_yo3j0CosjpZ5NLbWoYdviPvni3L5yRdlfP7YjqzUSGdPPMdr0sKgmZV8fyesvC_THpcyk5x16KFUu7duGDw7we_pmfNbGAOBNCIADiIH1bTcnTyEBm96DfEr_vQzeepTi4wxvYYOVrBNe0c7Ciq-EWv2FjvWhvpcGKPewvIhX8wq6ltHplTa_LQfB9b-u5EwYh-v3Nf0C0ArqOGssC76Sv2NW5e" alt="Medical engineering environment" />
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+      </div>
+      <div class="relative z-10 max-w-[1280px] mx-auto px-6 w-full">
+        <div class="max-w-2xl">
+          <span class="block mb-4 tracking-widest uppercase font-label-caps text-label-caps text-secondary">Get In Touch</span>
+          <h1 class="mb-6 font-h1 text-h1 text-primary">Partnering in <br/><span class="text-secondary">Precision Diagnostics</span></h1>
+          <p class="max-w-lg font-body-lg text-body-lg text-on-surface-variant">Reach out to our technical team for equipment acquisition, maintenance contracts, or facility engineering consultations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-xl bg-surface">
+      <div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+
+        <!-- ── Contact Form ── -->
+        <div class="p-6 bg-white border lg:col-span-7 md:p-lg rounded-xl shadow-card border-slate-100">
+          <div class="mb-8">
+            <h2 class="mb-2 font-h3 text-h3 text-primary">Send an Inquiry</h2>
+            <div class="w-12 h-1 rounded-full bg-secondary"></div>
+          </div>
+
+          <!-- FORM -->
+          <form id="contact-form" novalidate>
+            <div class="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
+              <div>
+                <label for="full-name">Full Name <span class="text-error">*</span></label>
+                <input id="full-name" name="fullName" type="text" placeholder="Dr. Aisha Bello" class="input-base" autocomplete="name" />
+                <p class="error-msg" id="err-name">Please enter your full name.</p>
+              </div>
+              <div>
+                <label for="email">Email Address <span class="text-error">*</span></label>
+                <input id="email" name="email" type="email" placeholder="aisha@hospital.ng" class="input-base" autocomplete="email" />
+                <p class="error-msg" id="err-email">Please enter a valid email address.</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2">
+              <div>
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" placeholder="08023011646" class="input-base" autocomplete="tel" />
+              </div>
+              <div>
+                <label for="department">Department / Unit <span class="text-error">*</span></label>
+                <select id="department" name="department" class="input-base" style="appearance:none; background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath fill='%2342474e' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E\"); background-repeat:no-repeat; background-position:right 12px center; padding-right:36px;">
+                  <option value="">— Select department —</option>
+                  <option>Radiology &amp; Imaging</option>
+                  <option>Laboratory Services</option>
+                  <option>ICU / Critical Care</option>
+                  <option>Cardiology</option>
+                  <option>Technical Support</option>
+                  <option>Sales &amp; Procurement</option>
+                  <option>Administration / Management</option>
+                </select>
+                <p class="error-msg" id="err-dept">Please select your department.</p>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label for="interest">Equipment / Service Interest</label>
+              <div class="flex flex-wrap gap-2 mt-2" id="interest-chips">
+                <button type="button" data-val="Equipment Purchase"   class="chip px-3 py-1.5 rounded-full border border-slate-200 text-sm font-['Inter'] text-slate-600 hover:border-secondary hover:text-secondary transition-all">Equipment Purchase</button>
+                <button type="button" data-val="Maintenance Contract" class="chip px-3 py-1.5 rounded-full border border-slate-200 text-sm font-['Inter'] text-slate-600 hover:border-secondary hover:text-secondary transition-all">Maintenance Contract</button>
+                <button type="button" data-val="Spare Parts"         class="chip px-3 py-1.5 rounded-full border border-slate-200 text-sm font-['Inter'] text-slate-600 hover:border-secondary hover:text-secondary transition-all">Spare Parts</button>
+                <button type="button" data-val="Training"            class="chip px-3 py-1.5 rounded-full border border-slate-200 text-sm font-['Inter'] text-slate-600 hover:border-secondary hover:text-secondary transition-all">Training</button>
+                <button type="button" data-val="General Inquiry"     class="chip px-3 py-1.5 rounded-full border border-slate-200 text-sm font-['Inter'] text-slate-600 hover:border-secondary hover:text-secondary transition-all">General Inquiry</button>
+              </div>
+              <input type="hidden" id="interest-val" name="interest" />
+            </div>
+
+            <div class="mb-6">
+              <label for="message">Message <span class="text-error">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Describe your requirements — equipment type, facility scale, timeline..." class="resize-none input-base"></textarea>
+              <div class="flex justify-between mt-1">
+                <p class="error-msg show" id="err-msg" style="display:none;">Please describe your inquiry.</p>
+                <span id="char-count" class="ml-auto text-xs text-slate-400">0 / 1000</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 mb-6">
+              <input id="consent" name="consent" type="checkbox" class="w-4 h-4 mt-1 cursor-pointer accent-secondary shrink-0" />
+              <label for="consent" class="text-xs font-normal leading-relaxed normal-case text-slate-500" style="text-transform:none; font-weight:400; letter-spacing:0;">
+                I agree that AMAANAT MEDICAL may contact me regarding my inquiry. My information will not be shared with third parties.
+              </label>
+            </div>
+            <p class="error-msg" id="err-consent" style="margin-top:-16px; margin-bottom:16px;">Please accept to proceed.</p>
+
+            <button type="submit" id="submit-btn"
+              class="flex items-center justify-center w-full gap-2 px-10 py-4 text-white transition-all rounded-lg bg-primary-container font-button text-button hover:opacity-90 md:w-auto">
+              <span id="btn-text">Submit Inquiry</span>
+              <span id="btn-icon" class="text-sm material-symbols-outlined">send</span>
+              <svg id="btn-spinner" class="hidden w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+              </svg>
+            </button>
+          </form>
+
+          <!-- SUCCESS STATE -->
+          <div id="form-success" class="py-12 text-center">
+            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-green-100 rounded-full">
+              <span class="text-4xl text-green-600 material-symbols-outlined" style="font-variation-settings:'FILL' 1;">check_circle</span>
+            </div>
+            <h3 class="mb-3 font-h3 text-h3 text-primary">Inquiry Sent!</h3>
+            <p class="max-w-sm mx-auto mb-6 text-on-surface-variant text-body-md">Thank you. Our engineering team will review your inquiry and get back to you within <strong>24 hours</strong>.</p>
+            <button onclick="resetForm()" class="flex items-center gap-1 mx-auto text-sm text-secondary font-button hover:underline">
+              <span class="text-sm material-symbols-outlined">refresh</span> Send another inquiry
+            </button>
+          </div>
+        </div>
+
+        <!-- ── Contact Details Column ── -->
+        <div class="lg:col-span-5 space-y-gutter">
+
+          <!-- Office Card -->
+          <div class="bg-white border p-md rounded-xl shadow-card border-slate-100">
+            <h3 class="mb-6 font-h3 text-h3 text-primary">Office Headquarters</h3>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-surface-container-low text-secondary shrink-0">
+                  <span class="material-symbols-outlined">location_on</span>
+                </div>
+                <div>
+                  <h4 class="mb-1 text-sm font-semibold text-primary">Location</h4>
+                  <p class="text-body-sm text-on-surface-variant">17, Kudirat Abiola Way,<br/>Opposite Oregun Bus Stop,<br/>Oregun, Ikeja, Lagos, Nigeria.<br/>(P.O. Box 7832, Ikeja)</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-surface-container-low text-secondary shrink-0">
+                  <span class="material-symbols-outlined">call</span>
+                </div>
+                <div>
+                  <h4 class="mb-1 text-sm font-semibold text-primary">Direct Contact</h4>
+                  <p class="text-body-sm text-on-surface-variant">08023011646<br/>08035026442<br/>08033184305</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-surface-container-low text-secondary shrink-0">
+                  <span class="material-symbols-outlined">mail</span>
+                </div>
+                <div>
+                  <h4 class="mb-1 text-sm font-semibold text-primary">Email Support</h4>
+                  <p class="text-body-sm text-on-surface-variant">amanaat@yahoo.com<br/>amaanatnetwk@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map placeholder -->
+          <div class="bg-white rounded-xl shadow-card border border-slate-100 overflow-hidden h-[260px] relative">
+            <img class="object-cover w-full h-full opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-1Gd1Xg_jP0yPc5kv0OIfpVelnRDGN_iFPtdyDr8b2MWWCF1Cs0NPc49IcmZ6ylCHeEbEbkSoeE6_FQJcEZtCJLBsOCcL70ELhs7QNWcpSPVt6ijVyz-CrafG7XTTyDP5xEnkcVrENX3k9_S9x1cZ8cVDTzkcNFkY_k5RrB8w75ol2gto1-6u8nCj5GHOZNeOkcxD__g09WFPW2Ov1GZ_b2kT8YqlebNm7hK2i_vzv0oQMuC5RlEWAHTKzS-Nznq_MEKxtV5V4e0Z" alt="Ikeja Lagos map" />
+            <div class="absolute flex items-center gap-2 px-3 py-2 border rounded-lg top-3 left-3 bg-white/90 backdrop-blur-md border-slate-200">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              <span class="font-label-caps text-[10px] tracking-wider text-primary">VISIT OUR FACILITY</span>
+            </div>
+          </div>
+
+          <!-- Hours Card -->
+          <div class="text-white bg-primary-container p-md rounded-xl">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-cyan-400">schedule</span>
+              <h4 class="text-sm font-semibold">Service Availability</h4>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <p class="text-[10px] text-on-primary-container font-label-caps">WEEKDAYS</p>
+                <p class="text-sm font-semibold">08:00 AM – 06:00 PM</p>
+              </div>
+              <div>
+                <p class="text-[10px] text-on-primary-container font-label-caps">TECHNICAL SUPPORT</p>
+                <p class="text-sm font-semibold">24/7 Priority Line</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-lg bg-surface-container-low border-y border-slate-200">
+      <div class="max-w-[1280px] mx-auto px-6 text-center">
+        <h3 class="mb-4 font-h2 text-h2 text-primary">Ready to upgrade your medical infrastructure?</h3>
+        <p class="max-w-xl mx-auto mb-8 font-body-md text-on-surface-variant">Our team of biomedical engineers is standing by to provide technical evaluations and procurement strategy.</p>
+        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="../pages/equipment.html" class="py-4 text-white transition-all rounded-lg bg-primary px-lg font-button text-button hover:opacity-90">Browse Equipment</a>
+          <a href="../pages/services.html"  class="py-4 transition-all border rounded-lg border-secondary text-secondary px-lg font-button text-button hover:bg-secondary/5">Our Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer" class="w-full py-16 text-white bg-blue-900 border-t border-blue-800"></footer>
+
+  <script src="../js/layout.js"></script>
+  <script>
+    renderNav('contact', '../');
+    renderFooter('../');
+
+    // ── Interest Chips ───────────────────────────────────────
+    const chips    = document.querySelectorAll('.chip');
+    const chipInput = document.getElementById('interest-val');
+    let   selected = new Set();
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const v = chip.dataset.val;
+        if (selected.has(v)) {
+          selected.delete(v);
+          chip.classList.remove('bg-secondary', 'text-white', 'border-secondary');
+          chip.classList.add('text-slate-600', 'border-slate-200');
+        } else {
+          selected.add(v);
+          chip.classList.add('bg-secondary', 'text-white', 'border-secondary');
+          chip.classList.remove('text-slate-600', 'border-slate-200');
+        }
+        chipInput.value = [...selected].join(', ');
+      });
+    });
+
+    // ── Char Counter ─────────────────────────────────────────
+    const msgEl   = document.getElementById('message');
+    const counter = document.getElementById('char-count');
+    msgEl.addEventListener('input', () => {
+      const len = msgEl.value.length;
+      counter.textContent = len + ' / 1000';
+      if (len > 1000) msgEl.value = msgEl.value.slice(0, 1000);
+    });
+
+    // ── Validation helpers ───────────────────────────────────
+    function showErr(id, show) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = show ? 'block' : 'none';
+    }
+    function markField(el, hasErr) {
+      if (hasErr) el.classList.add('field-error');
+      else        el.classList.remove('field-error');
+    }
+
+    function validate() {
+      let ok = true;
+
+      const name = document.getElementById('full-name');
+      const nameOk = name.value.trim().length >= 2;
+      markField(name, !nameOk); showErr('err-name', !nameOk);
+      if (!nameOk) ok = false;
+
+      const email = document.getElementById('email');
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+      markField(email, !emailOk); showErr('err-email', !emailOk);
+      if (!emailOk) ok = false;
+
+      const dept = document.getElementById('department');
+      const deptOk = dept.value !== '';
+      markField(dept, !deptOk); showErr('err-dept', !deptOk);
+      if (!deptOk) ok = false;
+
+      const msg = document.getElementById('message');
+      const msgOk = msg.value.trim().length >= 10;
+      markField(msg, !msgOk); showErr('err-msg', !msgOk);
+      if (!msgOk) ok = false;
+
+      const consent = document.getElementById('consent');
+      const consentOk = consent.checked;
+      showErr('err-consent', !consentOk);
+      if (!consentOk) ok = false;
+
+      return ok;
+    }
+
+    // ── Submission (AJAX → submit-enquiry.php) ───────────────
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!validate()) return;
+
+      const btn     = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnIcon = document.getElementById('btn-icon');
+      const spinner = document.getElementById('btn-spinner');
+      const errBox  = document.getElementById('form-ajax-error');
+
+      // Loading state
+      btn.disabled            = true;
+      btnText.textContent     = 'Sending…';
+      btnIcon.style.display   = 'none';
+      spinner.classList.remove('hidden');
+      if (errBox) errBox.style.display = 'none';
+
+      // Build FormData from the form
+      const form     = document.getElementById('contact-form');
+      const formData = new FormData(form);
+
+      // Consent checkbox value must be sent explicitly as 'true'/'false'
+      formData.set('consent', document.getElementById('consent').checked ? 'true' : 'false');
+
+      // Honeypot field (must remain empty)
+      formData.set('website', '');
+
+      try {
+        // Path is relative: contact.html is in /pages/, PHP is one level up
+        const response = await fetch('../submit-enquiry.php', {
+          method:  'POST',
+          headers: { 'X-Requested-With': 'XMLHttpRequest' },
+          body:    formData,
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          // ── Success state ────────────────────────────────────
+          document.getElementById('contact-form').style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          // ── Server-side validation / rate-limit error ────────
+          throw new Error(data.error || 'Submission failed. Please try again.');
+        }
+
+      } catch (err) {
+        // ── Network / server error ───────────────────────────
+        btn.disabled          = false;
+        btnText.textContent   = 'Submit Inquiry';
+        btnIcon.style.display = '';
+        spinner.classList.add('hidden');
+
+        if (errBox) {
+          errBox.textContent     = err.message || 'An unexpected error occurred. Please try again or call us directly on 08023011646.';
+          errBox.style.display   = 'block';
+          errBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+    });
+
+    function resetForm() {
+      document.getElementById('contact-form').reset();
+      document.getElementById('contact-form').style.display = '';
+      document.getElementById('form-success').style.display = 'none';
+      document.getElementById('submit-btn').disabled = false;
+      document.getElementById('btn-text').textContent = 'Submit Inquiry';
+      document.getElementById('btn-icon').style.display = '';
+      document.getElementById('btn-spinner').classList.add('hidden');
+      selected.clear();
+      chips.forEach(c => {
+        c.classList.remove('bg-secondary', 'text-white', 'border-secondary');
+        c.classList.add('text-slate-600', 'border-slate-200');
+      });
+      counter.textContent = '0 / 1000';
+      // Clear errors
+      document.querySelectorAll('.error-msg').forEach(e => e.style.display = 'none');
+      document.querySelectorAll('.field-error').forEach(e => e.classList.remove('field-error'));
+    }
+
+    // ── Live field clearing ──────────────────────────────────
+    ['full-name','email','department','message'].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('input', () => { markField(el, false); });
+      el.addEventListener('change', () => { markField(el, false); });
+    });
+  </script>
+</body>
+</html>

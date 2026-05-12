@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMAANAT MEDICAL — Equipment Catalog</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+
+  <header id="site-nav" class="fixed top-0 w-full z-50 h-[80px] bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-card"></header>
+
+  <main class="pt-[80px]">
+
+    <!-- Hero -->
+    <section class="relative h-[380px] flex items-center justify-center overflow-hidden bg-primary-container">
+      <div class="absolute inset-0 opacity-40">
+        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4OPQZuoYxXnS1FgBah7fP6XHRsb_ymoV5SwUnXozpcIX8-ppnfBrQ6nowouCbB3MdYKafRe4MiIFrZtrvT7B8MJ2L5dNc74E6YOsfDb3Sii5nOUYpCXhXZun9Nl8Cc3-6mQykhv0ImN9mfQvG3p5JRRc3dUZQVAMCmRxPGGH9ZhGtT944-ipZEgcHc1R0bfuwmUAK93Nw6HIyQZy8MupTDdBsdUgSt74e_znzUk8xUaSnrXeF_xteUxPmqU7m28QhH61tUWQJFXvr" alt="Medical diagnostic facility" />
+      </div>
+      <div class="relative z-10 text-center px-6 max-w-3xl">
+        <span class="inline-block px-3 py-1 bg-secondary-container/30 border border-secondary-container/40 rounded text-secondary-fixed text-label-caps mb-4 uppercase">Our Portfolio</span>
+        <h1 class="font-h1 text-h1 text-white mb-4">Precision Diagnostic Equipment</h1>
+        <p class="font-body-lg text-body-lg text-slate-200">Engineering the future of healthcare with world-class medical technologies and diagnostic systems for specialized facilities.</p>
+      </div>
+    </section>
+
+    <!-- Filter Tabs + Catalog -->
+    <section class="max-w-[1280px] mx-auto px-6 py-xl">
+
+      <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+        <div>
+          <h2 class="font-h2 text-h2 text-primary border-l-4 border-secondary pl-4">Equipment Portfolio</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mt-2">Comprehensive solutions for modern clinical environments.</p>
+        </div>
+        <!-- Search -->
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]">search</span>
+          <input id="eq-search" type="text" placeholder="Search equipment..." class="pl-10 pr-4 py-2.5 border border-slate-200 rounded-lg text-sm font-['Inter'] focus:outline-none focus:ring-2 focus:ring-secondary bg-white w-full md:w-64" />
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap gap-2 mb-10" id="filter-tabs">
+        <button data-filter="all"       class="filter-btn active-filter px-5 py-2 rounded-full text-sm font-['Inter'] font-semibold transition-all">All</button>
+        <button data-filter="imaging"   class="filter-btn px-5 py-2 rounded-full text-sm font-['Inter'] font-semibold transition-all">Medical Imaging</button>
+        <button data-filter="lab"       class="filter-btn px-5 py-2 rounded-full text-sm font-['Inter'] font-semibold transition-all">Laboratory</button>
+        <button data-filter="icu"       class="filter-btn px-5 py-2 rounded-full text-sm font-['Inter'] font-semibold transition-all">ICU &amp; Life Support</button>
+        <button data-filter="endo"      class="filter-btn px-5 py-2 rounded-full text-sm font-['Inter'] font-semibold transition-all">Endoscopy</button>
+        <button data-filter="special"   class="filter-btn px-5 py-2 rounded-full text-sm font-['Inter'] font-semibold transition-all">Specialized</button>
+      </div>
+
+      <!-- Equipment Cards Grid -->
+      <div id="equipment-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="imaging" data-name="CT Scanners">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi3qjGRd5pq6vzYcOIo9qlk383zffKN1JYl5lDk-pvctlhKa3XKsiu3rdfqX4fOHE41lnq2EV0ow3v9L02ZdRrhR7Shvz5A45RQEcMhcQ5kDAd49KLIFBZIybCRGrLNZJpK4bXmesm6NfzI2VAeeMSjmL-FhMV91mYzXUJV0bh-ZrD1l3ya4dO5suOY39eRozQyTiwULRJy01kxwIZdNrP2JtYB8pPYX4o_NPyYkT5kuW9wpP4KdnWyaolPwFi5CS8M-1Qsy5lLZix" alt="CT Scanners" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Imaging</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>In Stock</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">CT Scanners</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">High-resolution CT systems available in 16-slice, 32-slice, and 64-slice configurations for diagnostic centres requiring uncompromising image clarity.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">16-slice</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">32-slice</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">64-slice</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="imaging" data-name="MRI Systems">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA67BHiFk9nX27GJSH4L012EyNkt5PCfEK8YIoh3r2y3WrtO-qBDZz9Q53bwMLLXxeuS4Vj1gveVJAJiqH6bFKEvGInpnAdnhbMZQfPulxIIPGBjmSfeqPFMDbsuODVYsIP9Fv4Xsx-uWDeSzhrGq4fh4q67dKfLy0alJIIoWspyVyxlvzkgSlZWCQiV1XSq_HLJ_vXg9nJgw8OXLzBGDFGPZvmEavJi_rjlNLvvbYgkuah1r0V94QJ_JTZndIVcTX8WayCLKwQOGsT" alt="MRI Systems" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Imaging</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>Available</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">MRI Systems</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">Magnetic resonance imaging systems for comprehensive soft-tissue diagnostics. Available for supply, installation, commissioning and decommissioning.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Supply</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Install</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Decommission</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="imaging" data-name="Digital & Analog X-ray Systems">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtPaeyTOF1PqvfcUv1vdSB96eePtQzol4e1NNUCoKdJ4wTtcLaNGNTj9svjL0W3zGUX7cLLX3PpQdcobT4b9tpLMolU8vjgwTiKq8BlZLlgaabePsy6bfs1TBqiDYQC35DcoFfpvvhxW2AJfbclBTtVOzqNRIrAlxC65xEBghETRDZWBF19D5V_cpifd_NVSIDdr69lrlDoOICpJsNbejmZLHvqnf0CwHCo-4ezPs" alt="Digital & Analog X-ray Systems" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Imaging</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>In Stock</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">Digital & Analog X-ray Systems</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">Static and mobile X-ray systems with full accessories. DR/CR digitizers and computer radiography for radiology departments.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Digital DR</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Analog</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Mobile</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">CR/Digitizer</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="imaging" data-name="Fluoroscopy Systems">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtPaeyTOF1PqvfcUv1vdSB96eePtQzol4e1NNUCoKdJ4wTtcLaNGNTj9svjL0W3zGUX7cLLX3PpQdcobT4b9tpLMolU8vjgwTiKq8BlZLlgaabePsy6bfs1TBqiDYQC35DcoFfpvvhxW2AJfbclBTtVOzqNRIrAlxC65xEBghETRDZWBF19D5V_cpifd_NVSIDdr69lrlDoOICpJsNbejmZLHvqnf0CwHCo-4ezPs" alt="Fluoroscopy Systems" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Imaging</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>Available</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">Fluoroscopy Systems</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">Digital fluoroscopy units for real-time imaging, interventional radiology, and gastrointestinal procedures.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Digital</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Interventional</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="imaging" data-name="Portable & Colour Doppler Ultrasound">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe7zkKiYPCw4rL9r2ZKcekGb8cEgkqJKza44BU5910hSRwJDfrgYckXO1gT-sxao6S1MOskhuR7dAh7xfblBJB7AEG96inCmKJt0bPIX8u61vBo60SZ233dpm21aLDLAxrxUe7hLkSpgdr9CKBi9Rf7lp-wlSvkYRFxku8Xpahr7vbY6-hNG_mYcDpMSvxCAY26Mb4pbIPpUP1WF7Mx-X6v1j5V8ZXfZIDRsJe3F5A0A2I1ivmW85I1iI8Sg9gPJtN2PMAX67JyoTA" alt="Portable & Colour Doppler Ultrasound" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Imaging</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>In Stock</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">Portable & Colour Doppler Ultrasound</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">High-performance portable and cart-based colour Doppler ultrasound systems from SonoScape and Chison. 2D, 3D, and 4D configurations available.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Portable</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Colour Doppler</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">2D/3D/4D</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">SonoScape</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Chison</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="imaging" data-name="DICOM / Laser Medical Printers">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtPaeyTOF1PqvfcUv1vdSB96eePtQzol4e1NNUCoKdJ4wTtcLaNGNTj9svjL0W3zGUX7cLLX3PpQdcobT4b9tpLMolU8vjgwTiKq8BlZLlgaabePsy6bfs1TBqiDYQC35DcoFfpvvhxW2AJfbclBTtVOzqNRIrAlxC65xEBghETRDZWBF19D5V_cpifd_NVSIDdr69lrlDoOICpJsNbejmZLHvqnf0CwHCo-4ezPs" alt="DICOM / Laser Medical Printers" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Imaging</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>In Stock</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">DICOM / Laser Medical Printers</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">Dry-laser DICOM printers from Codonics and Colenta for radiology film printing and archiving. Compatible with CT, MRI, and CR systems.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Codonics</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Colenta</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">DICOM</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Dry Laser</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="lab" data-name="HLA / Tissue Typing & Cross-Match Equipment">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBsT8Vn8Zbv7Sx9SeqHA0HY8sYBPRWCLCtm4gAViImVw3PDM6E9uukxHdb836A4f8zdGM3bneFcck985QHQDqCOD6A6DZSWPEeu-huNKmFNhlSDykFfJV2P1ih-5atcmTBEhVX1pd5oBmomS4NmMJM8Rpy33RiA2VWpZNimiT-NTk-Sx6mMXJl0KEouqvCxPQXbBg1R_5DOBTMzAuhWUX6pcdSeZuVLYciE5k" alt="HLA / Tissue Typing & Cross-Match Equipment" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Laboratory</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>In Stock</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">HLA / Tissue Typing & Cross-Match Equipment</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">Luminex-based HLA tissue typing and cross-match laboratory systems. Specialist reagent kits, consumables and accessories also supplied.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Luminex</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">HLA</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Tissue Typing</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Cross-Match</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="lab" data-name="Hematology & Biochemistry Analyzers">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBsT8Vn8Zbv7Sx9SeqHA0HY8sYBPRWCLCtm4gAViImVw3PDM6E9uukxHdb836A4f8zdGM3bneFcck985QHQDqCOD6A6DZSWPEeu-huNKmFNhlSDykFfJV2P1ih-5atcmTBEhVX1pd5oBmomS4NmMJM8Rpy33RiA2VWpZNimiT-NTk-Sx6mMXJl0KEouqvCxPQXbBg1R_5DOBTMzAuhWUX6pcdSeZuVLYciE5k" alt="Hematology & Biochemistry Analyzers" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Laboratory</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>Available</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">Hematology & Biochemistry Analyzers</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">High-throughput automated analyzers for complete blood counts, biochemistry panels, blood gas, and urine analysis.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Hematology</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Biochemistry</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Blood Gas</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Urine</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="icu" data-name="Patient & Fetal Monitors">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYB1nSNsI6cH_CEHhNkN1AWkrFZEci9BlcHfIXPBTmru8ULAdwT80Wuyr4adMjc9wqxhOGgwCa3EA-9RiKB1tKKgwRR_3ZHX9_xq-P7s57Tcl0MOvTPhDj3W13eP4Gw2n9U6KAq0oRE5Cs3mZsoc-V8ZnN01kb9XIwr_NF3NvE4rG7XFDHZzUCAM0IUzXLaf9SsplaO3pgXfurteGf8FQzvlTfH0nqerJQTlHP_h2-4K5yDZTDk6l6Ik4Akp814hXExce3mVdnf-3j" alt="Patient & Fetal Monitors" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Life Support / ICU</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>In Stock</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">Patient & Fetal Monitors</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">ICU-grade patient monitoring systems and fetal monitors for maternal and neonatal care units.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Patient Monitor</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Fetal Monitor</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">ICU</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="icu" data-name="ECG & Neurology Equipment">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYB1nSNsI6cH_CEHhNkN1AWkrFZEci9BlcHfIXPBTmru8ULAdwT80Wuyr4adMjc9wqxhOGgwCa3EA-9RiKB1tKKgwRR_3ZHX9_xq-P7s57Tcl0MOvTPhDj3W13eP4Gw2n9U6KAq0oRE5Cs3mZsoc-V8ZnN01kb9XIwr_NF3NvE4rG7XFDHZzUCAM0IUzXLaf9SsplaO3pgXfurteGf8FQzvlTfH0nqerJQTlHP_h2-4K5yDZTDk6l6Ik4Akp814hXExce3mVdnf-3j" alt="ECG & Neurology Equipment" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Life Support / ICU</span>
+              <span class="flex items-center gap-1 text-xs text-green-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>Available</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">ECG & Neurology Equipment</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">ECG machines and EEG neurological monitoring equipment for cardiac and neuroscience departments.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">ECG</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">EEG</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Neurology</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="endo" data-name="ERCP Endoscopy Systems">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB50IgDej0dDvIIPtYxEi-0zpYV6GhQfncT_Moj7wU-JbYBW98HDlXQv8bCIN9_jQsqi84Ua3bM1JvomkB9uoq66114TZECbKFztp706FcxNEbZ88nwMF1l5us00CFS2Pg5RAU3m3wvYgpwGNYHrDLi0L_Ysmh4GQlmywJfu6m8NstfjkZpT5ijHfMyKICo11gvyW3R3NKw5VJoJAK5U8jm-lOBtK9QW2P6UOhbo5juQ0Sx9THSWbB9T1iLTI0MOHooCDH8ICBdgYc8" alt="ERCP Endoscopy Systems" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Endoscopy</span>
+              <span class="flex items-center gap-1 text-xs text-amber-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 inline-block"></span>On Request</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">ERCP Endoscopy Systems</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">Advanced ERCP systems for gastrointestinal diagnostics and therapeutic endoscopic procedures.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">ERCP</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">GI</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Therapeutic</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+        <div class="eq-card bg-white rounded-xl border border-slate-100 overflow-hidden shadow-card hover:-translate-y-1 transition-transform" data-category="special" data-name="FibroTouch — Liver Diagnostics">
+          <div class="h-52 overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCUs65lMnRE9sGEatqYE9l_ZlhwAEd4ISAjc4aQ7Y7eolbgd4FTHfbEi_eAqMrm_5DYf04jEY-XOHEl1Y8gzUb9inRs53j5NgF6WziedNuri9kyV2mSt-c_sV69pnkftczaYYOCiHbWs_FQGVwrCDVZxZko6OqAfY0BKPOhpcgg4mbzw3TXtoFrKCAtziwTjl2NDF0QJcX8v7XjxUqL9a5TkCx_82iecFHdQ-HQD5fUYQPW1lGY7XAIGn8B-AlTisL_842oI6egTC5" alt="FibroTouch — Liver Diagnostics" />
+          </div>
+          <div class="p-md">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-1 bg-surface-container-low text-secondary text-xs font-bold rounded-full uppercase tracking-wider">Specialized</span>
+              <span class="flex items-center gap-1 text-xs text-amber-600 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 inline-block"></span>On Request</span>
+            </div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">FibroTouch — Liver Diagnostics</h3>
+            <p class="text-body-sm text-on-surface-variant mb-4">FibroTouch non-invasive liver fibrosis assessment technology. Ultrasound-based elastography for accurate, painless liver health evaluation.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Non-invasive</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Liver</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">Elastography</span><span class="px-2 py-1 bg-surface-container text-primary-container text-xs font-semibold rounded border border-surface-container-high">FibroTouch</span></div>
+            <a href="../pages/contact.html" class="inline-flex items-center gap-2 text-secondary font-button text-sm hover:underline">Request Quote <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Empty state (hidden by default) -->
+      <div id="no-results" class="hidden text-center py-24">
+        <span class="material-symbols-outlined text-5xl text-slate-300">search_off</span>
+        <p class="text-slate-500 mt-4 font-['Inter']">No equipment matches your search.</p>
+        <button onclick="resetFilters()" class="mt-4 text-secondary font-button text-sm hover:underline">Clear filters</button>
+      </div>
+    </section>
+
+    <!-- Technical Support Banner -->
+    <section class="bg-surface-container-low py-xl">
+      <div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+        <div>
+          <h2 class="font-h2 text-h2 text-primary mb-6">Technical Support &amp; Precision Engineering</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Our commitment extends beyond equipment sales. We provide full-lifecycle technical support, OEM-certified maintenance, and professional installation for every system we deliver.</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="bg-white p-2 rounded-lg shadow-sm border border-slate-100"><span class="material-symbols-outlined text-secondary">settings_suggest</span></div>
+              <div>
+                <h4 class="font-bold text-primary">OEM Parts &amp; Maintenance</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Guaranteed genuine parts and certified software updates for all systems.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="bg-white p-2 rounded-lg shadow-sm border border-slate-100"><span class="material-symbols-outlined text-secondary">support_agent</span></div>
+              <div>
+                <h4 class="font-bold text-primary">24/7 Technical Response</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Dedicated response teams for critical ICU and imaging system faults.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl h-[400px]">
+          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-7GOQaBXhMdVfHwMNgmg1qnALzaN0Y0Td2MBK-4mMLkh1DUxNpddnYMcZE2W3AF88fAjgdM3mR7gxqIlFmK9tReI4wIUJ527wS5WZqIknrCcrA7Gt1SXp-JuuG9sGZjZJm_TyQNjQczDzdt1aUcU5dNeKdYEobbNt1UPn9s-OLEecPksdQuBbwKo9ik4nu9QK93lr_AOCe5iVbh2uEEelZdlO9NCEMjFZdgQPyEQLwOAo_DUUxlUR3_q3frzK-IRik9F67rXKXa-X" alt="Engineer at diagnostic console" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer" class="w-full py-16 bg-blue-900 border-t border-blue-800 text-white"></footer>
+
+  <script src="../js/layout.js"></script>
+  <script>
+    renderNav('equipment', '../');
+    renderFooter('../');
+
+    // ── Filter + Search Logic ────────────────────────────────
+    const cards   = document.querySelectorAll('.eq-card');
+    const tabs    = document.querySelectorAll('.filter-btn');
+    const search  = document.getElementById('eq-search');
+    const noRes   = document.getElementById('no-results');
+    let   current = 'all';
+
+    function styleTab(btn, active) {
+      if (active) {
+        btn.classList.add('bg-primary', 'text-white', 'shadow-md');
+        btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+      } else {
+        btn.classList.remove('bg-primary', 'text-white', 'shadow-md');
+        btn.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+      }
+    }
+
+    // Init tab styles
+    tabs.forEach(btn => styleTab(btn, btn.dataset.filter === 'all'));
+
+    function applyFilters() {
+      const q = search.value.toLowerCase().trim();
+      let visible = 0;
+      cards.forEach(card => {
+        const catMatch  = current === 'all' || card.dataset.category === current;
+        const nameMatch = !q || card.dataset.name.toLowerCase().includes(q);
+        const show = catMatch && nameMatch;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      noRes.classList.toggle('hidden', visible > 0);
+    }
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        current = btn.dataset.filter;
+        tabs.forEach(b => styleTab(b, b === btn));
+        applyFilters();
+      });
+    });
+
+    search.addEventListener('input', applyFilters);
+
+    function resetFilters() {
+      current = 'all';
+      search.value = '';
+      tabs.forEach(b => styleTab(b, b.dataset.filter === 'all'));
+      applyFilters();
+    }
+
+    // Init
+    applyFilters();
+  </script>
+</body>
+</html>

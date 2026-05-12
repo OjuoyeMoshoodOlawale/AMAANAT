@@ -1,0 +1,53 @@
+/* ================================================
+   AMAANAT MEDICAL — Global Stylesheet
+   Design System: "Clinical Engineering Precision"
+   File: css/styles.css
+   ================================================ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+/* ── Material Symbols Icon Font ── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── Custom Shadows ── */
+.shadow-medical {
+  box-shadow: 0 10px 30px -10px rgba(11, 60, 93, 0.08);
+}
+
+.shadow-card {
+  box-shadow: 0 2px 10px rgba(11, 60, 93, 0.06);
+}
+
+/* ── Base ── */
+body {
+  background-color: #f8f9ff;
+  overflow-x: hidden;
+}
+
+/* ── Active Nav Link ── */
+nav a.nav-active {
+  color: #0891b2; /* cyan-600 */
+  border-bottom: 2px solid #0891b2;
+  padding-bottom: 4px;
+}
+
+/* ── About Page: Team hover ── */
+.team-card img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.team-card:hover img {
+  filter: grayscale(0%);
+}
+
+/* ── Bento Grid hover transitions ── */
+.bento-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.bento-card:hover {
+  transform: translateY(-2px);
+}
